@@ -16,7 +16,7 @@ pass=$pw, dbname=$db");
 
 	if($conexion->connect_errno)
 	{
-		echo 'Error en la conexion';
+		echo 'Error en la conexion PL';
 		exit;
 	};
 ?>
