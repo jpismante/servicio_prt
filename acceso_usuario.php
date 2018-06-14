@@ -5,7 +5,7 @@
 		include("conecta.php");
 			
 			// CONEXION A LA BASE DE DATOS 
-			$con=pg_connect($host,$user,$pw,$db) or die("Problemas al conectar");
+			$conexion=pg_connect($host,$user,$pw,$db) or die("Problemas al conectar");
 			
 			
 			if (!isset($_SESSION))
