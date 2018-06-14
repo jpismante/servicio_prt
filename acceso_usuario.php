@@ -5,7 +5,7 @@
 		include("conecta.php");
 			
 			// CONEXION A LA BASE DE DATOS 
-			$con=mysqli_connect($host,$user,$pw,$db) or die("Problemas al conectar");
+			$con=pg_connect($host,$user,$pw,$db) or die("Problemas al conectar");
 			
 			if (!isset($_SESSION))
 			{
@@ -21,8 +21,8 @@
 			$sql= ("call sp_Login('".$username."', '".$password."')");
 			
 			//SENTENCIA DE EJECUCION VARIABLE "SQL" Y HACER REFERENCIA A LA TABLA USUARIO 
-			$resultado= mysqli_query($con,$sql) or die (mysql_error());
-			$fila = mysqli_fetch_array($resultado);
+			$resultado= pg_query ($con,$sql) or die (pg_last_error());
+			$fila = pg_fetch_array($resultado);
 			
 			// RECORRER TABLA USUARIO PARA COMPROBAR INFORMACION INGRESADA EN EL LOGIN 
 			
