@@ -1,0 +1,44 @@
+html,body{
+  height:100%;
+}
+
+	
+}
+.full-height{
+  height: 100%;
+}
+.no-margin{
+  margin: 0;
+}
+.big-padding{
+  padding: 2em 1.5em;
+}
+.top-space{
+  margin-top:1em;
+}
+.underline{
+  text-decoration: underline;
+}
+
+.mdl-mega-footer{
+  position:fixed;
+  width:100%;
+  
+  bottom: 0;
+  height:5%;
+}
+
+.page-content{
+  position:relative;
+  width:100%;
+  height:100%;
+  scroll-behavior: auto;
+}
+
+.mdl-grid{
+  width: 50%
+}
+
+.full-div{
+  width: 100%
+}
