@@ -7,6 +7,7 @@
 			// CONEXION A LA BASE DE DATOS 
 			$con=pg_connect($host,$user,$pw,$db) or die("Problemas al conectar");
 			
+			
 			if (!isset($_SESSION))
 			{
 				session_start();
@@ -21,8 +22,10 @@
 			$sql= ("call sp_Login('".$username."', '".$password."')");
 			
 			//SENTENCIA DE EJECUCION VARIABLE "SQL" Y HACER REFERENCIA A LA TABLA USUARIO 
-			$resultado= pg_query ($con,$sql) or die (pg_last_error());
+			$resultado= pg_query($con,$sql) or die (pg_last_error());
 			$fila = pg_fetch_array($resultado);
+			
+
 			
 			// RECORRER TABLA USUARIO PARA COMPROBAR INFORMACION INGRESADA EN EL LOGIN 
 			
@@ -43,4 +46,4 @@
 				
 						header("Location: menu_principal.php");
 			}
-?> 
+?>
