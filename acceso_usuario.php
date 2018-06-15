@@ -29,7 +29,7 @@
 			echo $Sql;
 			$fila = pg_fetch_array($resultado);
 			
-
+ 
 			
 			// RECORRER TABLA USUARIO PARA COMPROBAR INFORMACION INGRESADA EN EL LOGIN 
 			
