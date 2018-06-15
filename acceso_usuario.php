@@ -5,9 +5,9 @@
 		include("conecta.php");
 			
 			// CONEXION A LA BASE DE DATOS 
-			//$conexion=pg_connect($host,$user,$pw,$db) ;
+			$conexion=pg_connect($host,$user,$pw,$db) ;
 			
-			$conexion = pg_connect("host=23.21.238.28 dbname=df4orf8aamnp52 user=anjjmaptvflzwt password=7c4a2861b9398fbd924df37ac4ccc75d173006388205912d74b6289a630422d6")  or die('No se ha podido conectar: ' . pg_last_error());
+
 			
 			if (!isset($_SESSION))
 			{
