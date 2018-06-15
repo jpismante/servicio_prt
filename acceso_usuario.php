@@ -24,6 +24,8 @@
 			
 			//SENTENCIA DE EJECUCION VARIABLE "SQL" Y HACER REFERENCIA A LA TABLA USUARIO 
 			$resultado= pg_query($con,$sql) or die ("No se ha podido establecer conexión ".pg_last_error());
+			echo $con;
+			echo $Sql;
 			$fila = pg_fetch_array($resultado);
 			
 
