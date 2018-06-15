@@ -23,7 +23,7 @@
 			$sql= ("call sp_Login('".$username."', '".$password."')");
 			
 			//SENTENCIA DE EJECUCION VARIABLE "SQL" Y HACER REFERENCIA A LA TABLA USUARIO 
-			$resultado= pg_query($con,$sql) or die (pg_last_error());
+			$resultado= pg_query($con,$sql) or die ("No se ha podido establecer conexión ".pg_last_error());
 			$fila = pg_fetch_array($resultado);
 			
 
