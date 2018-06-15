@@ -5,7 +5,7 @@
 		include("conecta.php");
 			
 			// CONEXION A LA BASE DE DATOS 
-			$conexion=pg_connect($host,$user,$pw,$db) or die("Problemas al conectar");
+			$conexion=pg_connect($host,$user,$pw,$db) ;
 			
 			
 			if (!isset($_SESSION))
@@ -20,6 +20,7 @@
 			// LLAMADO Y DELCLARACION DE VARIABLES CON PROCEDIMIENTO ALMACENADO DE LOGIN 
 			
 			$sql= ("call sp_Login('".$username."', '".$password."')");
+			echo $sql;
 			
 			//SENTENCIA DE EJECUCION VARIABLE "SQL" Y HACER REFERENCIA A LA TABLA USUARIO 
 			$resultado= pg_query($con,$sql) or die ("No se ha podido establecer conexión ".pg_last_error());
@@ -44,6 +45,6 @@
 						
 						
 				
-						header("Location: menu_principal.php");
+						//header("Location: menu_principal.php");
 			}
 ?>
