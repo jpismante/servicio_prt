@@ -18,7 +18,7 @@
 	//DECLARACION DE VARIABLES DE CONEXION A BASE DE DATOS 
 
 
-			$conexion = new pg_connect($host, $user, $pw, $db);	
+			//$conexion = new pg_connect($host, $user, $pw, $db);	
 				
 			$consulta = '';
 			
