@@ -21,6 +21,8 @@
 			$consulta = '';
 			
 			
+
+?>
 		<?php
 			$host = "23.21.238.28";
 			$user ="anjjmaptvflzwt";
@@ -28,8 +30,6 @@
 			$db ="df4orf8aamnp52";
 			$port="5432";
 		?>
-
-?>
 
 
 
